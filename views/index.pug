@@ -1,0 +1,90 @@
+extends layout
+block content
+  .searchbar
+    form(action="catalog/search" method="GET")
+      input#search(type='search' name="query" placeholder='Szukaj artykuły, gatunki i języki...')
+      button(type='submit')
+        i.fas.fa-search
+  .cards
+    .add
+      a(href="/catalog/create")
+        i.fas.fa-plus-square
+    .container
+      a(href=randInf.link target='_blank')
+        .card
+          .card-header
+            img(src='/images/informatyka.jpg' alt='Informatyka')
+          .card-body
+            <div class="tags">
+              <span class="tag tag-teal">#{randInf.genre}</span>
+              <span class="tag tag-eng">#{randInf.lang}</span>
+            </div>
+            h4
+              | #{randInf.title}
+            p
+              | #{randInf.desc}
+      a(href=randMath.link target='_blank')
+        .card
+          .card-header
+            img(src='/images/math.jpg' alt='Matematyka')
+          .card-body
+            <div class="tags">
+              <span class="tag tag-teal">#{randMath.genre}</span>
+              <span class="tag tag-eng">#{randMath.lang}</span>
+            </div>
+            h4
+              | #{randMath.title}
+            p
+              | #{randMath.desc}
+      a(href=randBiol.link target='_blank')
+        .card
+          .card-header
+            img(src='/images/biology.jpg' alt='Biologia')
+          .card-body
+            <div class="tags">
+              <span class="tag tag-teal">#{randBiol.genre}</span>
+              <span class="tag tag-eng">#{randBiol.lang}</span>
+            </div>
+            h4
+              | #{randBiol.title}
+            p
+              | #{randBiol.desc}
+      a(href=randChem.link target='_blank')
+        .card
+          .card-header
+            img(src='/images/chemistry.jpg' alt='Chemia')
+          .card-body
+            <div class="tags">
+              <span class="tag tag-teal">#{randChem.genre}</span>
+              <span class="tag tag-eng">#{randChem.lang}</span>
+            </div>
+            h4
+              | #{randChem.title}
+            p
+              | #{randChem.desc}
+      a(href=randRoz.link target='_blank')
+        .card
+          .card-header
+            img(src='/images/personal_development.jpg' alt='Rozwój Osobisty')
+          .card-body
+            <div class="tags">
+              <span class="tag tag-teal">#{randRoz.genre}</span>
+              <span class="tag tag-eng">#{randRoz.lang}</span>
+            </div>
+            h4
+              | #{randRoz.title}
+            p
+              | #{randRoz.desc}
+      a(href=randHis.link target='_blank')
+        .card
+          .card-header
+            img(src='/images/history.jpg' alt='rover')
+          .card-body
+            <div class="tags">
+              <span class="tag tag-teal">#{randHis.genre}</span>
+              <span class="tag tag-eng">#{randHis.lang}</span>
+            </div>
+            h4
+              | #{randHis.title}
+            p
+              | #{randHis.desc}

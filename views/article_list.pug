@@ -1,0 +1,11 @@
+extends layout
+block content
+  .article-container
+    each article in articles_list
+      .kafelki.card-color-1
+            h2.card_title #{article.title}
+            h3.card_opis
+              |#{article.desc}
+            a.card_link(href=article.link target='_blank')
+              h7 Przejd&zacute; do strony 
+            p
